@@ -32,3 +32,40 @@ public class Program
     }
 }
 }
+
+
+using System;
+
+public class Program
+{
+    public static void Main(){
+        //Crea un programa que simule una calculadora básica. El usuario debe ingresar dos números y un operador (+, -, *,/). Usa switch para realizar la operación correspondiente y mostrar el resultado.
+	int num1, num2, resultado;
+	string operador;
+		Console.WriteLine("Ingrese un dos números: ");
+        num1 = Int32.Parse(Console.ReadLine());
+		num2 = Int32.Parse(Console.ReadLine());
+		Console.WriteLine("Ingrese la operacion que desea realizar (+, -, *, /): ");
+operador = Console.ReadLine();
+switch (operador){
+	case "+":
+		resultado = num1 + num2;
+		Console.WriteLine("El resultado es: "+resultado.ToString());
+		break;
+	case "-":
+		resultado = num1 - num2;
+    Console.WriteLine("El resultado es: "+resultado.ToString());
+		break;
+	case "*":
+		resultado = num1 * num2;
+    Console.WriteLine("El resultado es: "+resultado.ToString());
+		break;
+	case "/":
+		resultado = num1 / num2;
+    Console.WriteLine("El resultado es: "+resultado.ToString());
+		break;
+
+}
+	}
+}
+

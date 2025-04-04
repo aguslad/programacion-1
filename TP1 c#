@@ -1,0 +1,34 @@
+using System;
+
+public class Program
+{
+    public static void Main(){
+        //Crea un programa que tome un número del 1 al 7 como entrada y muestre el día de la semana correspondiente (1 =Lunes, 2 = Martes, ..., 7 = Domingo). Si el número no está en ese rango, muestra "Día inválido".
+		int numero;
+        Console.WriteLine("Ingrese un número del 1 al 7: ");
+        numero = Int32.Parse(Console.ReadLine());
+		switch(numero){
+			case 1:
+				Console.WriteLine("Lunes");
+				break;
+			case 2:
+				Console.WriteLine("Martes");
+				break;
+			case 3:
+				Console.WriteLine("Miércoles");
+				break;
+			case 4:
+				Console.WriteLine("Jueves");
+				break;
+			case 5:
+				Console.WriteLine("Viernes");
+				break;
+			case 6:
+				Console.WriteLine("Sábado");
+				break;
+			case 7:
+				Console.WriteLine("Domingo");
+				break;
+    }
+}
+}

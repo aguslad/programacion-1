@@ -1,9 +1,173 @@
+1) Escribir un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no
+
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		int edad;
+		Console.WriteLine("Ingrese su edad");
+		edad = Int32.Parse(Console.ReadLine());
+		
+		if (edad>=18){
+			Console.WriteLine("Es mayor de edad");
+		}
+		else{
+			Console.WriteLine("No es mayor de edad");
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+2) Escribir un programa que almacene la cadena de caracteres contraseña en una variable, pregunte al usuario por la contraseña e imprima por pantalla si la contraseña introducida por el usuario coincide con la guardada en la variable sin tener en cuenta mayúsculas y minúsculas. 
+
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		string contraseña, contraseña1;
+		Console.WriteLine("Ingrese su contraseña");
+		contraseña = Console.ReadLine();
+		Console.WriteLine("Ingrese su contraseña nuevamente");
+		contraseña1 = Console.ReadLine();
+		if(contraseña == contraseña1){
+			Console.WriteLine("Las contraseñas introducidas coinciden");
+		}
+		else{
+			Console.WriteLine("Las contraseñas introducidas no coinciden");
+		}
+		
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+3) Escribir un programa que pida al usuario dos números y muestre por pantalla su división. Si el divisor es cero el programa debe mostrar un error
+
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		
+		int num1, num2, resultado;
+		
+		Console.WriteLine("Ingrese dos números");
+		num1 = Int32.Parse(Console.ReadLine());
+		num2 = Int32.Parse(Console.ReadLine());
+		
+		if (num2 != 0){
+			resultado = num1 / num2;
+			Console.WriteLine("El resultado es: "+resultado.ToString());
+		}
+		else{
+			Console.WriteLine("Error");
+		}
+		
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+4) Escribir un programa que pida al usuario un número entero y muestre por pantalla si es par o impar
+
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		
+		int num;
+		
+		Console.WriteLine("Ingrese un número");
+		num = Int32.Parse(Console.ReadLine());
+		
+		if (num % 2 == 0){
+			Console.WriteLine("El número es par");
+		}
+		else{
+			Console.WriteLine("El número es impar");
+		}
+		
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+5) Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a 1000  mensuales. Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no
+
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		
+		int edad, ingresos;
+		
+		Console.WriteLine("Ingrese su edad");
+		edad = Int32.Parse(Console.ReadLine());
+		Console.WriteLine("Ingrese sus ingresos");
+		ingresos = Int32.Parse(Console.ReadLine());
+		
+		if (edad > 16){
+			if (ingresos >= 1000){
+				Console.WriteLine("Tiene que tributar");
+			}
+			else{
+				Console.WriteLine("No debe tributar");
+			}
+		}
+		else{
+			Console.WriteLine("No debe tributar");
+		}
+		
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+6) Escribir un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€ 
+
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		
+		int edad;
+		
+		Console.WriteLine("Ingrese su edad");
+		edad = Int32.Parse(Console.ReadLine());
+		
+		if (edad < 4){
+			Console.WriteLine("Pasa gratis ");
+		}
+		else{
+			if (edad <= 18 & edad >= 4){
+				Console.WriteLine("Debe pagar $5");
+			}
+			else{
+				if (edad > 18){
+					Console.WriteLine("Debe pagar $10");
+				}
+				else{
+				}
+			}
+		}
+		
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+7) Crea un programa que tome un número del 1 al 7 como entrada y muestre el día de la semana correspondiente (1 =Lunes, 2 = Martes, ..., 7 = Domingo). Si el número no está en ese rango, muestra "Día inválido".
+
 using System;
 
 public class Program
 {
     public static void Main(){
-        //Crea un programa que tome un número del 1 al 7 como entrada y muestre el día de la semana correspondiente (1 =Lunes, 2 = Martes, ..., 7 = Domingo). Si el número no está en ese rango, muestra "Día inválido".
+        
 		int numero;
         Console.WriteLine("Ingrese un número del 1 al 7: ");
         numero = Int32.Parse(Console.ReadLine());
@@ -33,13 +197,14 @@ public class Program
 }
 }
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
+8) Crea un programa que simule una calculadora básica. El usuario debe ingresar dos números y un operador (+, -, *,/). Usa switch para realizar la operación correspondiente y mostrar el resultado.
 using System;
 
 public class Program
 {
     public static void Main(){
-        //Crea un programa que simule una calculadora básica. El usuario debe ingresar dos números y un operador (+, -, *,/). Usa switch para realizar la operación correspondiente y mostrar el resultado.
+        
 	int num1, num2, resultado;
 	string operador;
 		Console.WriteLine("Ingrese un dos números: ");
@@ -69,3 +234,40 @@ switch (operador){
 	}
 }
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+9) 
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		
+		int numero;
+		
+		Console.WriteLine("Ingrese un número");
+		numero = Int32.Parse(Console.ReadLine());
+		
+		if (numero == 0){
+			Console.WriteLine("El número es cero");
+		}
+		else{
+			if (numero > 100){
+				Console.WriteLine("Número positivo grande");
+			}
+			else {
+				if (numero <= 100 & numero > 50){
+				Console.WriteLine("Número positivo mediano");
+				}
+				else {
+					if (numero <= 50 & numero != 0){
+					Console.WriteLine("Número positivo pequeño");
+					}
+					else{}
+				}
+			}
+		}
+	
+	}
+						
+}

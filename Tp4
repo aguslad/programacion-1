@@ -1,0 +1,189 @@
+1) 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero;
+		int c = 1;
+		Console.WriteLine("Adivine el número secreto");
+		Random aleatorio = new Random();
+        int intNumero = aleatorio.Next(10);
+		
+		Console.WriteLine("El numero secreto es " +intNumero.ToString());
+		Console.WriteLine("Ingrese un número");
+		numero = Int32.Parse(Console.ReadLine());
+		
+		while (numero != intNumero) 
+		{
+			Console.WriteLine("El número es incorrecto, ingrese otro");
+			numero = Int32.Parse(Console.ReadLine());
+			c++;
+		}
+		Console.WriteLine("La cantidad de intentos fue de: " +c.ToString());
+		
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+2)
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero, resultado;
+		int i = 1;
+		Console.WriteLine("Ingrese un número");
+		numero = Int32.Parse(Console.ReadLine());
+		
+		for (i = 1; i <= 10; i++ ){
+			resultado = numero * i;
+			Console.WriteLine(numero + "X" + i + " = " +resultado.ToString());
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+3) 
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int opcion, deposito, retiro;
+		int saldo = 5000;
+		
+		Console.WriteLine("Ingrese que operación quiere realizar seleccionando el número correspondiente: 1 = deposito, 2 = retiro, 0 = salir");
+		opcion = Int32.Parse(Console.ReadLine());
+		while(opcion != 0){
+			switch (opcion)
+			{
+				case 1:
+					Console.WriteLine("¿Cuánto dinero desea ingresar?");
+					deposito = Int32.Parse(Console.ReadLine());
+					saldo = saldo + deposito;
+					Console.WriteLine("Su saldo actual es de: " + saldo);
+					Console.WriteLine("Ingrese que operación quiere realizar seleccionando el número correspondiente: 1 = deposito, 2 = retiro, 0 = salir");
+					opcion = Int32.Parse(Console.ReadLine());
+				break;
+				case 2:
+					Console.WriteLine("¿Cuánto dinero desea retirar?");
+					retiro = Int32.Parse(Console.ReadLine());
+					if(retiro <= saldo){
+						saldo = saldo - retiro;
+						Console.WriteLine("Su saldo actual es de: " + saldo);
+						Console.WriteLine("Ingrese que operación quiere realizar seleccionando el número correspondiente: 1 = deposito, 2 = retiro, 0 = salir");
+					    opcion = Int32.Parse(Console.ReadLine());
+					}
+					else{
+						Console.WriteLine("El saldo es insuficiente para la extracción");
+						Console.WriteLine("Ingrese que operación quiere realizar seleccionando el número correspondiente: 1 = deposito, 2 = retiro, 0 = salir");
+					    opcion = Int32.Parse(Console.ReadLine());
+					}
+				  break;
+			}
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+4)
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero;
+		int suma = 0;
+		Console.WriteLine("Ingrese un número");
+		numero = Int32.Parse(Console.ReadLine());
+		while (numero != 0){
+			
+			suma = numero + suma;
+			Console.WriteLine("Ingrese otro número");
+			numero = Int32.Parse(Console.ReadLine());
+			
+		}
+		Console.WriteLine("El resultado de la suma es: " + suma.ToString());
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+5)
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero, n;
+		int i = 0;
+		Console.WriteLine("¿Cuántos números quiere ingresar");
+		n = Int32.Parse(Console.ReadLine());
+		for (i = 0; i < n; i++){
+			Console.WriteLine("Ingrese un número");
+			numero = Int32.Parse(Console.ReadLine());
+			Console.WriteLine(numero + " al cubo = " + numero * numero * numero);
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+6)
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero;
+		int i = 1;
+		Console.WriteLine("Ingrese un número");
+		numero = Int32.Parse(Console.ReadLine());
+		int factorial = 1;
+		
+		for (i = 1; i <= numero; i++){
+			factorial = factorial * i;
+		}
+		
+		Console.WriteLine("" + factorial.ToString());
+	}
+
+------------------------------------------------------------------------------------------------------------------------------
+7)
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int numero, resultado;
+		int i = 1;
+		int j = 1;
+		Console.WriteLine("Ingrese un número mayor o igual a 1");
+		numero = Int32.Parse(Console.ReadLine());
+		for(i = 1; i <= numero; i++){
+			Console.WriteLine("La tabla de multiplicar de " + i + " es: ");
+			for (j = 1; j <= 10; j++){
+				resultado = i * j;
+				Console.WriteLine(i + "X" + j + " = " +resultado.ToString());
+			}
+		}
+	}
+}
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+

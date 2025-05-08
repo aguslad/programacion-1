@@ -1,0 +1,160 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ejercicio_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero1, numero2;
+            string operacion;
+            Console.WriteLine("Ingrese dos números");
+            numero1 = Int32.Parse(Console.ReadLine());
+            numero2 = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese la operación que desea realizar: +: Sumar -: Restar *: Multiplicar /: Dividir");
+            operacion = Console.ReadLine();
+            switch (operacion)
+            {
+                case "+":
+                    Suma(numero1, numero2);
+                    break;
+                case "-":
+                    Resta(numero1, numero2);
+                    break;
+                case "*":
+                    Multiplicacion(numero1, numero2);
+                    break;
+                case "/":
+                    Division(numero1, numero2);
+                    break;
+            }
+
+            Console.ReadKey();
+        }
+    
+
+    static void Suma(int num1, int num2)
+        {
+           int resultado = num1 + num2;
+            Console.WriteLine("La suma de " + num1 + " + " +  num2 + " es: " + (num1+num2));
+        }
+
+    static void Resta(int num1, int num2)
+        {
+            int resultado = num1 + num2;
+            Console.WriteLine("La resta de " + num1 + " - " + num2 + " es: " + (num1 - num2));
+        }
+    static void Multiplicacion(int num1, int num2)
+        {
+            int resultado = num1 + num2;
+            Console.WriteLine("La multiplicación de " + num1 + " * " + num2 + " es: " + (num1 * num2));
+        }
+    static void Division(int num1, int num2)
+        {
+            int resultado = num1 + num2;
+            Console.WriteLine("La división de " + num1 + " / " + num2 + " es: " + (num1 / num2));
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ejercicio_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int edad;
+            Console.WriteLine("Ingrese su edad");
+            edad = Int32.Parse(Console.ReadLine());
+
+            if (EsMayorDeEdad(edad)) {
+                Console.WriteLine("Es mayor de edad");
+            }
+            else
+            {
+                Console.WriteLine("No es mayor de edad");
+            }
+             Console.ReadKey();  
+            
+        }
+        static bool EsMayorDeEdad(int edad)
+        {
+            if (edad >= 18)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ejercicio_3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int opcion, montoDeposito, montoRetiro;
+            int saldo = 5000;
+
+            Console.WriteLine("Ingrese la opcion que desea realizar 1: Depósito 2: Retiro 0: Salir");
+            opcion = Int32.Parse(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("Ingrese cuanto desea depositar");
+                    montoDeposito = Int32.Parse(Console.ReadLine());
+                    Deposito(saldo, montoDeposito);
+                    break;
+                case 2:
+                    Console.WriteLine("Ingrese cuanto desea retirar");
+                    montoRetiro = Int32.Parse(Console.ReadLine());
+                    Retiro(saldo, montoRetiro);
+                    break;
+            }
+        }
+        static void Deposito(int saldoActual, int montoDep)
+        {
+            saldoActual = saldoActual + montoDep;
+            Console.WriteLine("El depósito se realizo correctamente, su saldo actual es de: " + saldoActual);
+        }
+        static void Retiro(int saldoActual, int montoRet)
+        {
+            if (montoRet <= saldoActual)
+            {
+                saldoActual = saldoActual - montoRet;
+                Console.WriteLine("El retiro se realizo correctamente, su saldo actual es de: " + saldoActual);
+            }
+            else
+            {
+                Console.WriteLine("El saldo es insuficiente para la extracción");
+            }
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------

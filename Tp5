@@ -158,3 +158,116 @@ namespace ejercicio_3
     }
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicio_4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int temperaturaMinima, temperaturaMaxima, dias;
+            Console.WriteLine("Ingrese cuantos dias desea introducir");
+
+            dias = Int32.Parse(Console.ReadLine());
+            for (int i = 0; i < dias; i++)
+            {
+                Console.WriteLine("Ingrese la temperatura mínima y la temperatura máxima para calcular la temperatura media");
+                temperaturaMinima = Int32.Parse(Console.ReadLine());
+                temperaturaMaxima = Int32.Parse(Console.ReadLine());
+
+                TemperaturaMedia(temperaturaMinima, temperaturaMaxima);
+            }
+
+
+        }
+
+        static void TemperaturaMedia(int tempMin, int tempMax)
+        {
+            int tempMedia = (tempMax + tempMin) / 2;
+            Console.WriteLine("La temperatura media es de: " + tempMedia + "° grados");
+        }
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicio_5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2;
+            Console.WriteLine("Ingrese dos números");
+            num1 = Int32.Parse(Console.ReadLine());
+            num2 = Int32.Parse(Console.ReadLine());
+
+            if (EsMultiplo(num1, num2))
+            {
+                Console.WriteLine("Los números son múltiplos");
+            }
+            else {
+                Console.WriteLine("Los números no son múltiplos");
+            }
+
+
+        }
+        static bool EsMultiplo(int numero1, int numero2){
+            if (numero1 % numero2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;   
+            }
+
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicio_6
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero;
+            Console.WriteLine("Ingrese un número entero positivo");
+            numero = Int32.Parse(Console.ReadLine());
+            Factorial(numero);
+            Console.ReadKey();
+        }
+        static void Factorial(int num)
+        {
+            int contador = 1;
+            for (int i = 1; i <= num; i++)
+            {
+                contador = i * contador;
+
+            }
+            Console.WriteLine("El factorial de " + num + " es: " + contador);
+        }
+    }
+}
